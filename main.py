@@ -24,7 +24,7 @@ async def analizar_codigo(codigo: CodigoC):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Cambia a la URL de tu frontend
+    allow_origins=["https://lexer-back-2.onrender.com/"],  # Cambia a la URL de tu frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
