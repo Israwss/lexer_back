@@ -10,15 +10,16 @@ app = FastAPI()
 class CodigoC(BaseModel):
     codigo: str
 
-# Ruta para analizar el código C
 @app.post("/analizar")
 async def analizar_codigo(codigo: CodigoC):
-    # Aquí llamas a tu analizador léxico para analizar el código recibido
-    _, resultados = analizador.analisis(codigo.codigo)
+    # Llamar al analizador léxico actualizado para analizar el código recibido
+    _, resultados, contador = analisis(codigo.codigo)
 
     # Devolver los resultados del análisis
-    return {"resultados": resultados}
-
+    return {
+        "resultados": resultados,
+        "tokens_contados": contador
+    }
 
 
 app.add_middleware(
