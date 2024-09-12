@@ -13,7 +13,7 @@ class CodigoC(BaseModel):
 @app.post("/analizar")
 async def analizar_codigo(codigo: CodigoC):
     # Llamar al analizador léxico actualizado para analizar el código recibido
-    _, resultados, contador = analisis(codigo.codigo)
+    _, resultados, contador = analizador.analisis(codigo.codigo)
 
     # Devolver los resultados del análisis
     return {
