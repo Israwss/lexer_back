@@ -1,54 +1,63 @@
+
+---
+
 # Lexer C - Backend (FastAPI)
 
-Este es el backend de la aplicación Lexer C, construido con FastAPI. Procesa el código en C que se envía desde el frontend y devuelve el resultado del análisis léxico.
+This is the backend of the Lexer C application, built with FastAPI. It processes the C code sent from the frontend and returns the result of the lexical analysis.
 
-## Requisitos
+## Requirements
 
-- Python 3.8 o superior
+- Python 3.8 or higher
 - pip
 
-## Instalación
+## Installation
 
-1. Clona este repositorio:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/tu-repositorio/lexer-c-backend.git
-2. Ve al directorio del proyecto:
-   ```bash
+   git clone https://github.com/your-repository/lexer-c-backend.git
+   ```
 
+2. Navigate to the project directory:
+   ```bash
    cd lexer-c-backend
-3. Crea un entorno virtual (opcional pero recomendado):
-   ```bash
+   ```
 
+3. Create a virtual environment (optional but recommended):
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
-4. Instala las dependencias:
-   ```bash
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
+4. Install the dependencies:
+   ```bash
    pip install -r requirements.txt
+   ```
 
-5. Si no tienes el archivo requirements.txt, puedes crear uno con el siguiente contenido:
+5. If you don't have the `requirements.txt` file, you can create one with the following content:
    ```bash
-
    fastapi
    uvicorn
    pydantic
+   ```
 
-6. Uso
+## Usage
 
-Inicia el servidor FastAPI con Uvicorn:
-    ```bash
-    
-    uvicorn main:app --reload
+Start the FastAPI server with Uvicorn:
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-El servidor estará corriendo en http://127.0.0.1:8000. Puedes ver la documentación de la API en http://127.0.0.1:8000/docs.
+The server will be running at http://127.0.0.1:8000. You can view the API documentation at http://127.0.0.1:8000/docs.
 
-Estructura del proyecto
+## Project Structure
 
-    main.py: Archivo principal que contiene las rutas de la API y la lógica para procesar el código en C.
-    lexer.py: Contiene el código del analizador léxico que procesa el código en C.
-    requirements.txt: Lista de dependencias necesarias para ejecutar el proyecto.
+- `main.py`: Main file that contains the API routes and the logic to process the C code.
+- `lexer.py`: Contains the lexical analyzer code that processes the C code.
+- `requirements.txt`: List of dependencies required to run the project.
 
-Conectar con el Frontend
+## Connecting with the Frontend
 
-Asegúrate de que el frontend (Next.js) esté corriendo en http://localhost:3000 y que haga solicitudes al backend en http://127.0.0.1:8000.
+Ensure that the frontend (Next.js) is running at http://localhost:3000 and is making requests to the backend at http://127.0.0.1:8000.
+
+--- 
 
